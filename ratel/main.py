@@ -60,8 +60,9 @@ class Entry:
     def close(self):
         if hasattr(self, "_server_socket") and \
             hasattr(self._server_socket, "close") and \
-            callable(self._server_socket.close()):
+            callable(self._server_socket.close):
             try:
+                print "closing server socket"
                 self._server_socket.close()
             except IOError as ex:
                 print ex
