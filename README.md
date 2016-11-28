@@ -3,6 +3,10 @@ A Python asynchronous network library
 
 ---
 
+**Currently, only support epoll**
+
+---
+
 ## 测试
 
 * `git clone https://github.com/tim-chow/ratel`  
