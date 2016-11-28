@@ -169,6 +169,12 @@ class Entry:
                     print "%d is dead, respawn one worker" % pid
                     self.spawn_one()
 
+                    try:
+                        os.waitpid(pid, 0)
+                        print "already wait ", pid
+                    except OSError as ex:
+                        print ex
+
 def handle_command_line_options():
     usage = "%prog options"
     parser = optparse.OptionParser(usage)
